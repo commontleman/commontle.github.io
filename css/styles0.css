@@ -1,0 +1,1389 @@
+/* common */
+/* small screen */
+
+:root{
+  --my-color: hsl(39, 86%, 48%);
+}
+
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  color: #333;
+}
+
+a{
+  font-size: 15px;
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+li{
+  list-style: none;
+}
+
+header{
+  background-color: #fff;
+}
+
+.container{
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+/* TOP */
+
+#info span{
+  font-size: 30px;
+  font-family: Cursive;
+  color: var(--my-color);
+  margin: 0 0 0 10px;
+}
+
+.top{
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--my-color);
+  background: #fff;
+}
+
+.minimenu a{
+  display: block;
+  align-items: center;
+  /* background: #eee; */
+  color: var(--my-color);
+  text-align: right;
+  margin: 15px;
+}
+
+.response{
+  margin: 0;
+  display: none;
+}
+
+.response li{
+  list-style-type: disc;
+}
+
+.response a{
+  color: var(--my-color);
+}
+
+.response.open{
+  padding: 12px;
+  display: block;
+  background: #fff;
+}
+
+.response .open:hover{
+  text-decoration: underline;
+}
+
+/* メニュー */
+
+#info{
+  margin: 0;
+}
+
+.menu{
+  display: none;
+}
+
+/* タブ */
+
+main img{
+  width: 100%;
+}
+
+.tabbar{
+  background: var(--my-color);
+}
+
+.tab{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex: 1;
+  flex-shrink: 1;
+}
+
+.tab li{
+  width: 100px;
+  position: relative;
+}
+
+.tab li::after{
+  content: ' ';
+  background: var(--my-color);
+  display: block;
+  width: 2px;
+  height: 20px;
+  position: absolute;
+  top: calc((100% - 20px) / 2 );
+  right: -1px;
+}
+
+.tab li:last-child::after{
+  content: none;
+}
+
+.tab a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  flex-shrink: 1;
+  line-height: 40px;
+  width: 100%;
+  height: 100%;
+  color: #333;
+}
+
+.tab li a.active{
+  background: #fff;
+  color: var(--my-color);
+  border-top: 3px solid var(--my-color);
+}
+
+.tab li a:not(.active){
+  background: #efdec1;
+  transition: opacity .4s;
+}
+
+.tab a:hover{
+  background: rgba(0, 0, 0, 0.1);
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.tab li a:not(.active):hover{
+  opacity: 0.5;
+}
+
+.search{
+  background: #fff;
+  color:#333;
+  display: flex;
+  flex-direction: column;
+}
+
+.result.active{
+  color:#333;
+  display: block;
+  padding: 12px;
+  background: #fff;
+  border-bottom: 3px solid var(--my-color);
+}
+
+.result{
+  display: none;
+}
+
+.result ul{
+  padding: 0px;
+}
+
+.result li{
+  margin: 0 0 5px 16px;
+}
+
+.form{
+  color:#333;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.form a{
+  color:#333;
+}
+
+.result label{
+  display: block;
+  margin: 16px;
+}
+
+.trip{
+  display: flex;
+  margin: 16px;
+}
+
+.trip label{
+  margin: 0;
+  margin-left: 10px;
+}
+
+#return{
+  display: block;
+}
+
+#return.hide{
+  display: none;
+}
+
+.result input{
+  margin-left : 5px;
+  cursor: pointer;
+}
+
+.result select{
+  cursor: pointer;
+}
+
+.result button{
+  width: 250px;
+  line-height: 2;
+  background: var(--my-color);
+  text-align: center;
+  padding: 4px;
+  margin: auto;
+  color: #fff;
+  border-radius: 6px;
+  border: 2px solid #eee;
+  display: block;
+  cursor: pointer;
+}
+
+.result button:hover{
+  background: hsla(30, 86%, 48%, .9);
+}
+
+/* 広告 */
+.ad{
+  width: 240px;
+  height: 240px;
+  margin: 10px;
+}
+
+/* ミニ広告 */
+
+.miniad{
+  margin: 50px;
+  width: 100%;
+  height: 100px;
+  margin: 50px 0;
+  border: 2px solid #ccc;
+  box-sizing: border-box;
+}
+
+.miniad a{
+  display: block;
+  text-decoration-line: none;
+  height: 100%;
+} 
+
+.miniad a:hover{
+  background: rgba(0, 0, 0, 0.3);
+}
+
+#miniad1{
+  background: #fff;
+}
+
+#miniad1 h1{
+  color: red;
+  margin: 0;
+  padding: 25px;
+}
+
+#miniad2{
+  display: none;
+}
+
+#miniad3{
+  display: none;
+}
+
+
+
+/* おすすめ商品 */
+
+#recomendations h1{
+  text-align: center;
+}
+
+#recomendations > h1::before,
+#recomendations > h1::after{
+  content: ' - ';
+}
+
+.recomend{
+  position: relative;
+  display: flex;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 110px;
+  flex-shrink: 0;
+}
+
+.recomend:hover{
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.recomend .rect{
+  display: none;
+}
+
+.recomend img{
+  width: 30%;
+  border: 2px solid var(--my-color);
+}
+
+.fav{
+  margin: 5px;
+  position: absolute;
+}
+
+.fav input{
+  display: none;
+}
+
+.heart{
+  user-select: none;
+  font-size: 20px;
+  color: #fff;
+}
+
+.heart.like{
+  color: red;
+}
+
+.information{
+  width: 70%;
+  background: #efdec1;
+  box-sizing: border-box;
+  position: relative;
+  border-bottom: 2px solid var(--my-color);;
+  border-right: 2px solid var(--my-color);;
+}
+
+.information .comment{
+  background-color: var(--my-color);
+  width: 100%;
+  height: 20px;
+  color: #fff;
+}
+
+.information h1{
+  margin: 0;
+  font-size: 15px;
+}
+
+.information p{
+  margin: 0 0 0 5px;
+}
+
+.information span{
+  color: red;
+  font-weight: bold;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.btn a{
+  display: block;
+  width: 240px;
+  line-height: 30px;
+  border: 1px solid var(--my-color);
+  margin: 20px auto;
+  border-radius: 17px;
+  text-align: center;
+}
+
+.btn a:hover {
+  text-decoration: none;
+  opacity: 0.8;
+  box-shadow: 1px 2px var(--my-color);
+}
+
+/* 人気の旅行先 */
+
+#destination{
+  margin: auto;
+}
+
+#destination h1{
+  text-align: center;
+}
+
+#destination h1::before,
+#destination h1::after{
+  content: ' - ';
+}
+
+.destination {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.destination li{
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  margin: 5px 5px 5px 5px;
+  transition: transform 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.destination li:hover{
+  transform: translateY(-5px);
+  border: 1px solid var(--my-color);
+}
+
+.destination a{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+.tokyo{
+  background-image: url(../img/tokyo.jpg);
+  background-size: 100px 100px;
+}
+
+.osaka{
+  background-image: url(../img/osaka.jpg);
+  background-size: 100px 100px;
+}
+
+.kyoto{
+  background-image: url(../img/kyoto.jpg);
+  background-size: 100px 100px;
+}
+
+.fukuoka{
+  background-image: url(../img/fukuoka.jpg);
+  background-size: 100px 100px;
+}
+
+.okinawa{
+  background-image: url(../img/okinawa.jpg);
+  background-size: 100px 100px;
+}
+
+.hokkaido{
+  background-image: url(../img/hokkaido.jpg);
+  background-size: 100px 100px;
+}
+
+.kanazawa{
+  background-image: url(../img/kanazawa.jpg);
+  background-size: 100px 100px;
+}
+
+.island{
+  background-image: url(../img/island.jpg);
+  background-size: 100px 100px;
+}
+
+
+/* 目的別 */
+
+.todo h1{
+  text-align: center;
+  font-size: 2em;
+}
+
+.todo > h1::before,
+.todo > h1::after{
+  content: ' - ';
+}
+
+.todo{
+  width: 100%;
+}
+
+.todo0{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.todo0 img{
+  width: 100%;
+  height: 100%;
+}
+
+.todo0 > h1{
+  color: #fff;
+  /* font-size: 30px; */
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  margin: 0;
+}
+
+.contents{
+  display: flex;
+  overflow: hidden;
+}
+
+.contents a{
+  overflow: hidden;
+  width: 25%;
+  height: 100px;
+}
+
+.plan{
+  position: relative;
+  transition: transform .3s;
+  width: 100%; 
+  height: 100%;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.plan img{
+  width: 100%;
+  height: 100%;
+}
+
+.plan:hover{
+  opacity: 0.6;
+  transform: scale(1.1, 1.1);
+}
+
+.plan h2{
+  text-align: center;
+  color: #fff;
+  margin: 0;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  font-size: 13px;
+}
+
+.todo10{
+display: none;
+}
+
+/* NEWS */
+.news h1{
+  text-align: center;
+}
+
+.news h1::before,
+.news h1::after{
+  content: ' - ';
+}
+
+.news .flexbox{
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.news article{
+  margin-bottom: 30px;
+}
+
+.title{
+  width: 120px;
+  border-radius: 12px;
+  background: var(--my-color);
+  text-align: center;
+  line-height: 25px;
+}
+
+.news time{
+  margin-left: 10px;
+}
+
+.news article p{
+  margin: 10px 0 0 50px;
+}
+
+/* 広告 */
+
+#ad{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ad:hover{
+  opacity: 0.8;
+}
+
+.ad{
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+  border: 2px solid var(--my-color);
+  background-size: cover;
+  background-position: center;  
+}
+
+.ad h1{
+  width: 100%;
+  color:  #efdec1;
+  text-align: center;
+  font-size: 50px;
+}
+
+#goto{
+  background-image: url(../img/airplane.jpg);
+}
+
+#online{
+  background-image: url(../img/paris.jpg);
+}
+
+#hawaii{
+  background-image: url(../img/hawaii.jpg);
+}
+
+#bustour{
+  background-image: url(../img/karuizawa.jpg);
+}
+
+
+/* footer */
+
+footer{
+  background-color: #efefef;
+}
+
+footer span{
+  line-height: 50px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  border-bottom: 3px solid var(--my-color);
+}
+
+footer a{
+  text-align: center;
+  color: var(--my-color);
+}
+
+footer nav{
+  justify-content: center;
+  align-items: center;
+}
+
+footer nav ul{
+  padding: 5px;
+  margin: auto;
+}
+
+.company ul{
+  display: flex;
+  flex-direction: column;
+}
+
+.company li {
+  list-style: disc;
+  text-align: center;
+}
+
+.company li a{
+  text-align: center;
+}
+
+.sns ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sns li{
+  margin-right: 15px;
+}
+
+.sns img{
+  width: 30px;
+  height: 30px;
+  border: 0.4px solid #ccc;
+  border-radius: 8px;
+}
+
+/* middle screen */
+@media(min-width: 500px) {
+
+/* TOP */
+
+.top{
+  position: static;
+}
+
+.top .minimenu{
+  display: none;
+}
+
+.top .response{
+  display: flex;
+  padding: 0;
+  margin: 0;
+  align-items: flex-start;
+}
+
+.response li{
+  list-style-type: none;
+}
+
+.top a{
+  color:  var(--my-color);
+  text-align: center;
+  padding: 0 10px ;
+  position: relative;
+}
+
+.top a::after{
+  content: ' ';
+  background: #ccc;
+  display: block;
+  width: 2px;
+  height: 10px;
+  position: absolute;
+  top: calc((100% - 10px) / 2 );
+  right: -1px;
+}
+
+.top a:hover{
+  opacity: 0.8;
+}
+
+
+
+/* メニュー */
+
+.menu{
+  display: block;
+  width: 100%;
+}
+
+.menu ul{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  margin-bottom: 0;
+}
+
+.menu li{
+  flex: 1;
+  flex-shrink: 1;
+  position: relative;
+}
+
+.menu li::after{
+  content: ' ';
+  background: var(--my-color);
+  display: block;
+  width: 2px;
+  height: 20px;
+  position: absolute;
+  top: calc((100% - 20px) / 2 );
+  right: -1px;
+}
+
+.menu li:last-child::after{
+  content: none;
+}
+
+.menu a{
+  color: #333;
+  font-size: 15px;
+  line-height: 50px;
+  border-bottom: 2px solid #ccc;
+  margin: 0 auto;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex: 1;
+  flex-shrink: 1;
+}
+
+.menu a:hover{
+  background: rgba(238, 165, 6, 0.1);
+  opacity: 0.9;
+  color: #000;
+  text-decoration: none;
+  color: var(--my-color);
+  border-bottom: 3px solid  var(--my-color);
+}
+
+/* タブ */
+
+main{
+  position: relative;
+}
+
+main img{
+  position: relative;
+  height: 400px;
+}
+
+#tabbar{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.tabbar{
+  display: flex;
+  width: 400px;
+  height: 300px;
+  margin: 50px;
+}
+
+.tab{
+  flex-direction: column;
+}
+
+.tab li{
+  height: 100%;
+  flex: 1;
+  flex-shrink: 1;
+  margin: 0;
+}
+
+.tab li::after{
+  content: none;
+}
+
+.tab a{
+  border: 2px solid #fff;
+  box-sizing: border-box;
+}
+
+.tab li a.active{
+  border-top: none;
+  border-left: 3px solid var(--my-color);
+}
+
+.search{
+  width: 400px;
+  height: 300px;
+}
+
+.result.active{
+  height: 100%;
+  padding: 12px;
+}
+
+.result ul{
+  margin-top: 10px;
+}
+
+.result li{
+  margin: 0 0 3px 16px;
+}
+
+.trip{
+  margin: 0 16px;
+}
+
+#outward{
+  margin-top: 0;
+}
+
+#outward.scale{
+  margin: 16px;
+}
+
+/* mainad */
+.mainad{
+  display: none;
+}
+
+/* ミニ広告 */
+
+.adcontainer{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.miniad{
+  width: 350px;
+  flex-shrink: 1;
+  margin: 50px 15px;
+}
+
+#miniad2{
+  display: block;
+  background-image: url(../img/kamehameha.jpg);
+  background-size: cover;
+}
+
+#miniad2 a h1{
+  color: #fff;
+  font-size: 20px;
+  margin: 0;
+  padding: 20px;
+}
+
+/* おすすめ商品 */
+
+.recomendations{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.recomend{
+  flex-direction: column;
+  margin: 10px;
+  width: 200px;
+  height: 300px;
+  box-shadow: 5px 5px rgba(0,0,0,0.2);
+  border-radius: 15px;
+}
+
+.recomend .rect{
+  display: block;
+  position: absolute;
+  top: 0;
+  background-color: var(--my-color);
+  color: #fff;
+  border-radius: 10px 0 0 0;
+}
+
+.recomend img{
+  width: 100%;
+  height: 130px;
+  border-radius: 10px 10px 0 0;
+  border: none;
+}
+
+.fav{
+  margin: 0px;
+  display: block;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.heart{
+  font-size: 30px;
+}
+
+.heart.like{
+  color: red;
+}
+
+.information{
+  width: 100%;
+  height: 170px;
+  border-radius: 0 0 10px 10px;
+  border: none;
+}
+
+.information .comment{
+  border-radius: 0;
+}
+
+.information h1{
+  text-align: center;
+  color: #000;
+  margin: 0;
+  font-size: 20px;
+}
+
+.information span{
+  color: red;
+  font-weight: bold;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+}
+
+/* 人気の旅行先から選ぶ */
+
+.btncontainer{
+  display: flex;
+  justify-content: center;
+}
+
+.btn{
+  margin: 20px 5px;
+}
+
+/* 目的から選ぶ */
+
+.contents a{
+  height: 150px;
+}
+
+.plan h2{
+  font-size: 17px;
+}
+
+/* NEWS */
+
+.news .flexbox{
+  margin-left: 50px;
+}
+
+.news article{
+  border-bottom: 1px solid var(--mycolor);
+  margin-bottom: 30px;
+}
+
+.news article p{
+  margin: 15px 0 0 100px;
+}
+
+/* 広告 */
+
+#ad{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ad{
+  width: 140px;
+  height: 140px;
+  margin: 15px;
+}
+
+.ad h1{
+  font-size: 30px;
+}
+
+/* footer */
+
+footer nav{
+  display: flex;
+}
+
+.sns ul{
+  align-items: center;
+}
+
+
+}
+
+/* large screen */
+@media(min-width: 800px){
+
+/* メニュー */
+
+.menu a{
+  line-height: 64px;
+  font-size: 20px;
+}
+
+/* タブ */
+
+main img{
+  width: 100%;
+  position: relative;
+  height: 500px;
+}
+
+#tabbar{
+  display: flex;
+}
+
+.tabbar{
+  width: 500px;
+  height: 400px;
+  margin-left: 100px;
+}
+
+.search{
+  width: 500px;
+  height: 400px;
+}
+
+.result ul{
+  margin-top: 20px;
+}
+
+.result li{
+  margin: 0 0 10px 16px;
+}
+
+.trip{
+  margin: 16px;
+}
+
+#outward{
+  margin-top: 16px;
+}
+
+/* mainad */
+.mainad{
+  display: none;
+}
+
+/* ミニ広告 */
+
+#miniad3{
+  display: block;
+  background-image: url(../img/airplanetrack.jpg);
+  background-size: 100% 100px;
+}
+
+#miniad3 h1{
+  color: #eee;
+  margin: 0;
+  text-align: center;
+  font-size: 25px;
+  padding: 10px;
+}
+
+#miniad3 h1::before,
+#miniad3 h1::after{
+  content: ' - ';
+}
+
+#miniad3 p{
+  color: #eee;
+  margin: 0;
+  padding: 10px;
+}
+
+
+/* 人気の旅行先 */
+
+.destination {
+  flex-wrap: nowrap;
+}
+
+.destination li{
+  margin: 0 5px 0 5px;
+}
+
+.btn{
+  margin: 20px 15px;
+}
+
+.btn a{
+  width: 250px;
+}
+
+/* 目的別 */
+
+.todo0{
+  height: 720px;
+}
+
+.todo0 h1{
+  font-size: 60px;
+}
+
+.options{
+  display: flex;
+}
+
+.contents{
+  flex-shrink: 1;
+}
+
+.contents a{
+  height: 240px;
+}
+
+.plan{
+  height: 240px;
+  overflow: hidden;
+}
+
+.todo10{
+  background: var(--my-color);
+  width: 100%;
+  height: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.todo10 img{
+  display: none;
+}
+
+.todo10 h1{
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+/* NEWS */
+.news .flexbox{
+  margin-left: 100px;
+}
+
+.news article p{
+  margin-left: 150px;
+}
+
+/* 広告 */
+
+.ad{
+  width: 150px;
+  height: 150px;
+  margin: 15px;
+}
+
+.ad h1{
+  font-size: 30px;
+}
+
+/* footer */
+
+footer{
+  height: 200px;
+}
+
+footer nav{
+  margin-top: 50px;
+}
+
+.company{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0;
+  margin: 0 10px 0 15px;
+}
+
+.company li{
+  list-style: none;
+  position: relative;
+}
+
+.company a{
+  margin: 0 10px;
+}
+
+.company li a::after{
+  content: ' ';
+  background: #ccc;
+  display: block;
+  width: 2px;
+  height: 15px;
+  position: absolute;
+  top: calc((100% - 15px) / 2 );
+  right: -1px;
+}
+
+}
+
+@media(min-width: 1100px){
+
+/* main広告 */
+
+.mainad{
+  display: block;
+  flex: 1 1;
+  height: 400px;
+  margin: 45px;
+  border: 4px solid var(--my-color); 
+  box-sizing: border-box;
+  color: #fff;
+}
+
+.mainad h1{
+  padding-left: 20px;
+  display: block;
+  font-size: 40px;
+  color: var(--my-color);
+}
+
+.mainad h1 span{
+  padding-left: 140px;
+}
+
+.coupon{
+  display: flex;
+  flex-direction: column;
+}
+
+.mainad h2{
+  font-size: 30px;
+  line-height: 60px;
+  text-align: center;
+  background: s;
+  margin-bottom: 0;
+  width: 390px;
+  margin: auto;
+  /* background: rgba(180, 180, 180, 0.3); */
+  border: 3px solid #eee;
+}
+
+.mainad .box{
+  display: flex;
+  justify-content: center;
+  width: 390px;
+  margin: auto;
+  border: 3px solid #eee;
+  border-top: none;
+  color: #0f0f0f;
+}
+
+.mainad .box p {
+  background: rgba(255, 255, 255, 0.6);
+  /* background: hsla(39, 86%, 48%, 0.8); */
+  text-align: center;
+  margin: 0;
+}
+
+.mainad .box > p {
+  width: 60%;
+}
+
+.mainad .box p + p{
+  width: 40%;
+  border-left: 2px solid #eee;
+}
+
+.mainad .box p span{
+  font-size: 20px;
+  color: var(--my-color);
+  font-weight: bold;
+}
+
+.mainad .btn a{
+  background: var(--my-color);
+  color: #000;
+  border-radius: 0;
+  line-height: 40px;
+  border: 1px solid hsla(39, 100%, 70%);
+}
+
+/* 広告 */
+.ad{
+  width: 240px;
+  height: 240px;
+  margin: 10px;
+}
+
+}
