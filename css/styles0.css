@@ -254,12 +254,11 @@ main img{
   background: hsla(30, 86%, 48%, .9);
 }
 
-/* 広告 */
-.ad{
-  width: 240px;
-  height: 240px;
-  margin: 10px;
+/* main広告 */
+.mainad{
+  display: none;
 }
+
 
 /* ミニ広告 */
 
