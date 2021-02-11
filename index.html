@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MyTripECSite</title>
@@ -10,18 +12,15 @@
 </head>
 
 <body>
-
   <header>
 
-    <!-- TOP -->
+<!-- TOP -->
     <div class="container" id="info">
-
       <section class="top">
 
         <a href="#top"><span>Change&Create</span></a>
         
         <nav>
-
           <div class="minimenu">
             <a href="">MENU</a>
           </div>
@@ -36,14 +35,12 @@
             <li><a href="">お問い合わせ</a></li>
             <li><a href="">ログイン</a></li>
           </ul>
-            
         </nav>
           
       </section>
 
-      <!-- メニュー -->
+<!-- メインメニュー -->
       <section class="menu">
-
         <ul>
           <li><a href="#recomendations" data-id="ticket">おすすめ商品</a></li>
           <li><a href="#destination">人気の旅行先</a></li>
@@ -51,27 +48,22 @@
           <li><a href="#news">お知らせ</a></li>
           <li><a href="#ad">おすすめ情報</a></li>
         </ul>
-
       </section>
         
     </div>
   </header>
   
 
-  <!-- タブ -->
-
+<!-- SmallScreenMain広告 -->
   <main>
-    
     <div class="smallscreenadcontainer">
 
-      <img src="img/pic9.jpg" alt="">
+      <img src="img/mainimg.jpg" alt="">
       
       <aside class="smallscreenad">
-        
         <h1>GoToトラベル<br><span>キャンペーン</span></h1>
         
         <div class="coupon">
-          
           <h2>最大５０％お得！</h2>
           <div class="box">
             <p>Gotoトラベルで<br><span>最大３５％</span></p>
@@ -82,26 +74,27 @@
         <div class="btn">
           <a href="">詳しくはこちら</a>
         </div>
-        
+
       </aside>
     </div>
 
-
+<!-- タブ -->
     <div class="container" id="tabbar">
-      
       <div class="tabbar">
-        
         <ul class="tab">
+
           <li><a href="#" class="active" data-id="domestic">国内</a>
           <li><a href="#" data-id="international">海外</a></li>
           <li><a href="#" data-id="ticket">航空券</a></li>
           <li><a href="#" data-id="hotel">ホテル</a></li>
           <li><a href="#" data-id="rental">レンタカー</a></li>
+
         </ul>
             
         <div class="search">  
           <section class="result active" id="domestic">
             <ul class="form">
+
               <li><a href="">北海道</a></li>
               <li><a href="">東北</a></li>
               <li><a href="">関東</a></li>
@@ -112,11 +105,13 @@
               <li><a href="">山陰・山陽・四国</a></li>
               <li><a href="">九州</a></li>
               <li><a href="">沖縄</a></li>
+
             </ul>
           </section>
               
           <section class="result" id="international">  
             <ul class="form">
+
               <li><a href="">アメリカ</a></li>
               <li><a href="">ハワイ・グアム・サイパン</a></li>
               <li><a href="">ヨーロッパ</a></li>
@@ -126,6 +121,7 @@
               <li><a href="">カナダ・メキシコ</a></li>
               <li><a href="">カリブ・中南米</a></li>
               <li><a href="">中東・アフリカ</a></li>
+
             </ul>
           </section>
               
@@ -137,16 +133,18 @@
                 <label><input type="radio" name="trip" id="oneway" onclick="switchTrip()">片道</label>
               </div>
                   
-                <label id="outward">往路搭乗日 <input type="date" class="date"></label>
-                <label id="return">復路搭乗日 <input type="date" class="date"></label>
-                <label>出発地 <input type="text" placeholder="東京(HND)"></label>
-                <label>到着地 <input type="text" placeholder="那覇(OKA)"></label>
-                <button>検索</button>
+              <label id="outward">往路搭乗日 <input type="date" class="date"></label>
+              <label id="return">復路搭乗日 <input type="date" class="date"></label>
+              <label>出発地 <input type="text" placeholder="東京(HND)"></label>
+              <label>到着地 <input type="text" placeholder="那覇(OKA)"></label>
+              <button>検索</button>
+
             </form>
           </section>
               
           <section class="result" id="hotel">
             <form action="" class="form">
+
               <label>目的地 <input type="text" placeholder=目的地></label>
               <label>チェックイン日 <input type="date" class="date"></label>
               <label>チェックアウト日 <input type="date" class="date"></label>
@@ -159,28 +157,30 @@
                 </select>
               </label>
               <button>検索</button>
+
             </form>
           </section>
               
           <section class="result" id="rental">
             <form action="" class="form">
+
               <label>出発日 <input type="date" class="date"></label>
               <label>返却日 <input type="date" class="date"></label>
               <label>出発地 <input type="text" placeholder=那覇空港></label>
               <label>返却地 <input type="text" placeholder=那覇空港></label>
               <button>検索</button>
+
             </form>
           </section>
-
         </div>
       </div>
 
+<!-- Main広告 -->
         <aside class="mainad">
 
           <h1>GoToトラベル<br><span>キャンペーン</span></h1>
 
           <div class="coupon">
-
             <h2>最大５０％お得！</h2>
             <div class="box">
               <p>Gotoトラベルで<br><span>最大３５％</span></p>
@@ -193,16 +193,16 @@
           </div>
 
         </aside>
-
     </div>
-    
-
   </main>
 
+<!-- Mini広告 -->
   <aside class="adcontainer">
+
     <section class="miniad" id="miniad1">
       <a href="">
-        <h1>新型コロナウイルス<br>感染防止対策</h1>
+        <h1>海外最新情報</h1>
+        <p>渡航・入国条件、PCR検査など</p>
       </a>
     </section>
 
@@ -214,303 +214,340 @@
 
     <section class="miniad" id="miniad3">
       <a href="">
-        <h1>海外最新情報</h1>
-        <p>渡航・入国条件、PCR検査など</p>
+        <h1>新型コロナウイルス<br>感染防止対策</h1>
       </a>
     </section>
+
   </aside>
 
       
-  <!-- おすすめ商品 -->
+<!-- おすすめ商品 -->
+  <div class="container" id="recomendations">
 
-      <div class="container" id="recomendations">
+    <h1>おすすめ商品</h1>
 
-        <h1>おすすめ商品</h1>
+    <div class="recomendations">
+      
+      <a href="" class="recomend">
+
+        <div class="rect">羽田発着</div>
+        <img src="img/recomend_okinawa.jpg" >
+
+        <label class="fav">
+          <input type="checkbox">
+          <i class="material-icons heart">favorite</i>
+        </label>
+
+        <div class="information">
+          <div class="comment">九州・沖縄</div>
+          <h1>沖縄３日間</h1>
+          <p>マリオットホテルに宿泊リゾートステイ３日間</p>
+          <span>29000円〜</span>
+        </div>
+
+      </a>
+      
+      <a href="" class="recomend">
+
+        <div class="rect">羽田発着</div>
+        <img src="img/jal.jpg">
+
+        <label class="fav">
+          <input type="checkbox">
+          <i class="material-icons heart">favorite</i>
+        </label>
+
+        <div class="information">
+          <div class="comment">九州・沖縄</div>
+          <h1>別府温泉２日間</h1>
+          <p>JALビジネスクラスで行く温泉巡りの旅</p>
+          <span>40000円〜</span>
+        </div>
+
+      </a>
+      
+      <a href="" class="recomend">
+
+        <div class="rect">羽田発着</div>
+        <img src="img/recomend_asahikawa.jpg">
+
+        <label class="fav">
+          <input type="checkbox">
+          <i class="material-icons heart">favorite</i>
+        </label>
+
+        <div class="information">
+          <div class="comment">北海道</div>
+          <h1>旭川・美瑛</h1>
+          <p>旭山動物園チケット、レンタカー付２泊３日の旅<p>
+          <span>30000円〜</span>
+        </div>
+
+      </a>
+      
+      <a href="" class="recomend">
+
+        <div class="rect">バスツアー</div>
+        <img src="img/recomend_karuizawa.jpg">
+
+        <label class="fav">
+          <input type="checkbox">
+          <i class="material-icons heart">favorite</i>
+        </label>   
+
+        <div class="information">
+          <div class="comment">甲信越</div>
+          <h1>軽井沢日帰り</h1>
+          <p>軽井沢の自然の中で過ごす日帰りバスツアー</p>
+          <span>8600円〜</span>
+        </div>
+
+      </a>
+      
+      <a href="" class="recomend">
+
+        <div class="rect">羽田発着</div>
+        <img src="img/recomend_sikoku.jpg">
+
+        <label class="fav">
+          <input type="checkbox">
+          <i class="material-icons heart">favorite</i>
+        </label>   
+
+        <div class="information">
+          <div class="comment">山陰・山陽・四国</div>
+          <h1>四国３日間</h1>
+          <p>ANAで行く、四国２泊３日プラン</p>
+          <span>36000円〜</span>
+        </div>
+
+      </a>
+      
+      <a href="" class="recomend">
+
+        <div class="rect">羽田発着</div>
+        <img src="img/recomend_osaka.jpg">
+
+        <label class="fav">
+          <input type="checkbox">
+          <i class="material-icons heart">favorite</i>
+        </label>   
+
+        <div class="information">
+          <div class="comment">関西</div>
+          <h1>大阪２日間</h1>
+          <p>USJ１デイ・スタジオ・パス付き、プラン</p>
+          <span>26000円〜</span>
+        </div>
+
+      </a>
     
-          <div class="recomendations">
-            
-            <a href="" class="recomend">
-              <div class="rect">羽田発着</div>
-              <img src="img/recomend_okinawa.jpg" >
-              <label class="fav">
-                <input type="checkbox">
-                <i class="material-icons heart">favorite</i>
-              </label>
+    </div> 
 
-              <div class="information">
-                <div class="comment">九州・沖縄</div>
-                <h1>沖縄３日間</h1>
-                <p>マリオットホテルに宿泊リゾートステイ３日間</p>
-                <span>29000円〜</span>
-              </div>
-            </a>
-            
-            <a href="" class="recomend">
-              <div class="rect">羽田発着</div>
-              <img src="img/jal.jpg">
-
-              <label class="fav">
-                <input type="checkbox">
-                <i class="material-icons heart">favorite</i>
-              </label>
-
-              <div class="information">
-                <div class="comment">九州・沖縄</div>
-                <h1>別府温泉２日間</h1>
-                <p>JALビジネスクラスで行く温泉巡りの旅</p>
-                <span>40000円〜</span>
-              </div>
-            </a>
-            
-            <a href="" class="recomend">
-              <div class="rect">羽田発着</div>
-              <img src="img/recomend_asahikawa.jpg">
-              <label class="fav">
-                <input type="checkbox">
-                <i class="material-icons heart">favorite</i>
-              </label>
-              <div class="information">
-                <div class="comment">北海道</div>
-                <h1>旭川・美瑛</h1>
-                <p>旭山動物園チケット、レンタカー付２泊３日の旅<p>
-                <span>30000円〜</span>
-              </div>
-            </a>
-            
-            <a href="" class="recomend">
-              <div class="rect">バスツアー</div>
-              <img src="img/recomend_karuizawa.jpg">
-              <label class="fav">
-                <input type="checkbox">
-                <i class="material-icons heart">favorite</i>
-              </label>   
-              <div class="information">
-                <div class="comment">甲信越</div>
-                <h1>軽井沢日帰り</h1>
-                <p>軽井沢の自然の中で過ごす日帰りバスツアー</p>
-                <span>8600円〜</span>
-              </div>
-            </a>
-            
-            <a href="" class="recomend">
-              <div class="rect">羽田発着</div>
-              <img src="img/recomend_sikoku.jpg" >
-              <label class="fav">
-                <input type="checkbox">
-                <i class="material-icons heart">favorite</i>
-              </label>   
-
-              <div class="information">
-                <div class="comment">山陰・山陽・四国</div>
-                <h1>四国３日間</h1>
-                <p>ANAで行く、四国２泊３日プラン</p>
-                <span>36000円〜</span>
-              </div>
-            </a>
-            
-            <a href="" class="recomend">
-              <div class="rect">羽田発着</div>
-              <img src="img/recomend_osaka.jpg">
-              <label class="fav">
-                <input type="checkbox">
-                <i class="material-icons heart">favorite</i>
-              </label>   
-
-              <div class="information">
-                <div class="comment">関西</div>
-                <h1>大阪２日間</h1>
-                <p>USJ１デイ・スタジオ・パス付き、プラン</p>
-                <span>26000円〜</span>
-              </div>
-            </a>
-          
-          </div> 
-
-          <div class="btn">
-            <a href="">おすすめ商品をもっと見る</a>
-          </div>
-          
-        </div>
-      </div>
-
-  <!-- 人気の旅行先 -->
-
-      <div class="container" id="destination">
-
-        <h1>人気の旅行先から探す</h1>
+    <div class="btn">
+      <a href="">おすすめ商品をもっと見る</a>
+    </div>
         
-        <ul class="destination">
-          
-          <div class=""></div>
-          <li class="tokyo"><a href="">東京</a></li>
-          <li class="osaka"><a href="">大阪</a></li>
-          <li class="kyoto"><a href="">京都</a></li>
-          <li class="fukuoka"><a href="">福岡</a></li>
+  </div>
 
-          <li class="okinawa"><a href="">沖縄</a></li>
-          <li class="hokkaido"><a href="">北海道</a></li>
-          <li class="kanazawa"><a href="">金沢</a></li>
-          <li class="island"><a href="">離島</a></li>
-          
-        </ul>
+<!-- 人気の旅行先 -->
 
+  <div class="container" id="destination">
 
-        <div class="btncontainer">
-
-          <div class="btn">
-            <a href="">国内の人気の旅行先をもっと見る</a>
-          </div>
-          <div class="btn">
-            <a href="">海外の人気の旅行先を見る</a>
-          </div>
-          
-        </div>
-
-      </div>
-
-      <section class="todo" id="todo">
-
-        <h1>目的別に探す</h1>
-
-        <div class="todo0">
-          <img src="img/backgroudimg.jpg" alt="">
-          <h1>What Do You Do?</h1>
-        </div>
-
-        <div class="options">
-
-          <div id="contents">
-          
-              <div class="contents">
-                <a href=""><div class="todo1 plan">
-                  <img src="img/eat.jpg" alt="">
-                  <h2>食べる</h2>
-                </div></a>
-                <a href=""><div class="todo2 plan">
-                  <img src="img/shopping.jpg" alt="">
-                  <h2>買い物する</h2>
-                </div></a>
-                <a href=""><div class="todo3 plan">
-                  <img src="img/hangout.jpg" alt="">
-                  <h2>遊ぶ</h2>
-                </div></a>
-                <a href=""><div class="todo4 plan">
-                  <img src="img/experience.jpg" alt="">
-                  <h2>体験する</h2>
-                </div></a>
-              </div>
-              
-              <div class="contents">
-                <a href=""><div class="todo5 plan">
-                  <img src="img/relux.jpg" alt="">
-                  <h2>のんびりする</h2>
-                </div></a>
-                <a href=""><div class="todo6 plan">
-                  <img src="img/nature.jpg" alt="">
-                  <h2>自然</h2>
-                </div></a>
-                <a href=""><div class="todo7 plan">
-                  <img src="img/pic1.jpg" alt="">
-                  <h2>ウエディング</h2>
-                </div></a>
-                <a href=""><div class="todo8 plan">
-                  <img src="img/workation.jpg" alt="">
-                  <h2>ワーケーション</h2>
-                </div></a>
-              </div>
-              
-          </div>
-          
-          <div class="todo10">
-            <img src="img/pic2.jpg" alt="">
-            <h1>What's Your Plan?</h1>
-          </div>
-
-        </div>
-
-      </section>
-
-
-      <div class="news" id="news">
-
-        <h1>お知らせ</h1>
-        
-        <article>
-          <div class="flexbox">
-            <div class="title">[軽井沢特集]</div>
-            <time>2021-02-10</time>
-          </div>
-          
-          <a href=""><p>軽井沢の山の中でワーケーションを体験してみよう。</p></a><hr>
-        </article>
-        
-        <article>
-          <div class="flexbox">
-            <div class="title">[北海道特集]</div>
-            <time>2021-01−31
-            </time>
-          </div>
-          
-          <a href=""><p>北海道の美味しいお土産１０選。</p></a><hr>
-        </article>
-
-        <article>
-          <div class="flexbox">
-            <div class="title">[沖縄特集]</div>
-            <time>2021-01-21</time>
-          </div>
-
-          <a href=""><p>ゴルデンウィークは沖縄でゆっくり過ごそう。人気リゾートホテル特集</p></a><hr>
-        </article>
-
-        <article>
-          <div class="flexbox">
-            <div class="title">[ゴルフ特集]</div>
-            <time>2021-01-18</time>
-          </div>
-
-          <a href=""><p>環境を変えてスコアアップ！？国内ゴルフ場特集</p></a><hr>
-        </article>
-        
-      </div>
-      
-      
-      <div class="container" id="ad">
-
-        <h1>あなたへおすすめ情報</h1>
-
-        <section class="ad" id="goto">
-          <h1>GoToトラベル</h1>
-          <div class="rect">GoToトラベル</div>
-          <p>GoToトラベルキャンペーンご利用で最大５０％OFF</p>
-        </section>
-        
-        <section class="ad" id="online"> 
-          <h1>オンラインツアー</h1>
-          <div class="rect">オンラインツアー</div>
-          <p>オンラインツアーでご自宅から海外・国内旅行</p>
-        </section>
-        
-        <section class="ad" id="hawaii"> 
-          <h1>ハワイ</h1>
-          <div class="rect">ハワイ</div>
-          <p>【自主隔離免除】日本からの渡航者受け入れ開始！</p>
-        </section>
-
-        <section class="ad" id="bustour">
-          <h1>バスツアー</h1>
-          <div class="rect">バスツアー</div>
-          <p>日本の良さを再発見！お得な日帰りバスツアー</p>
-        </section>
-      
-      </div>
-
-
+    <h1>人気の旅行先から探す</h1>
+    
+    <ul class="destination">
   
+      <li class="tokyo"><a href="">東京</a></li>
+      <li class="osaka"><a href="">大阪</a></li>
+      <li class="kyoto"><a href="">京都</a></li>
+      <li class="fukuoka"><a href="">福岡</a></li>
+      <li class="okinawa"><a href="">沖縄</a></li>
+      <li class="hokkaido"><a href="">北海道</a></li>
+      <li class="kanazawa"><a href="">金沢</a></li>
+      <li class="island"><a href="">離島</a></li>
+      
+    </ul>
+
+    <div class="btncontainer">
+
+      <div class="btn">
+        <a href="">国内の人気の旅行先をもっと見る</a>
+      </div>
+      <div class="btn">
+        <a href="">海外の人気の旅行先を見る</a>
+      </div>
+      
+    </div>
+  </div>
+
+<!-- 目的別に探す -->
+  <section class="todo" id="todo">
+
+    <h1>目的別に探す</h1>
+
+    <div class="todo0">
+      <img src="img/backgroudimg.jpg" alt="">
+      <h1>What Do You Do?</h1>
+    </div>
+
+    <div class="options">
+      <div id="contents">
+        <div class="contents">
+
+          <a href="">
+            <div class="todo1 plan">
+              <img src="img/eat.jpg" alt="">
+              <h2>食べる</h2>
+            </div>
+          </a>
+
+          <a href="">
+            <div class="todo2 plan">
+              <img src="img/shopping.jpg" alt="">
+              <h2>買い物する</h2>
+            </div>
+          </a>
+
+          <a href="">
+            <div class="todo3 plan">
+              <img src="img/hangout.jpg" alt="">
+              <h2>遊ぶ</h2>
+            </div>
+          </a>
+
+          <a href="">
+            <div class="todo4 plan">
+              <img src="img/experience.jpg" alt="">
+              <h2>体験する</h2>
+            </div>
+          </a>
+
+        </div>
+        <div class="contents">
+
+          <a href="">
+            <div class="todo5 plan">
+              <img src="img/relux.jpg" alt="">
+              <h2>のんびりする</h2>
+            </div>
+          </a>
+
+          <a href="">
+            <div class="todo6 plan">
+              <img src="img/nature.jpg" alt="">
+              <h2>自然</h2>
+            </div>
+          </a>
+
+          <a href="">
+            <div class="todo7 plan">
+              <img src="img/wedding.jpg" alt="">
+              <h2>ウエディング</h2>
+            </div>
+          </a>
+
+          <a href="">
+            <div class="todo8 plan">
+              <img src="img/workation.jpg" alt="">
+              <h2>ワーケーション</h2>
+            </div>
+          </a>
+
+        </div>
+      </div>
+  
+      <div class="todo10">
+        <img src="img/pic2.jpg" alt="">
+        <h1>What's Your Plan?</h1>
+      </div>
+
+    </div>
+  </section>
+
+<!-- News -->
+  <div class="news" id="news">
+
+    <h1>お知らせ</h1>
+    
+    <article>
+
+      <div class="flexbox">
+        <div class="title">[軽井沢特集]</div>
+        <time>2021-02-10</time>
+      </div>
+      <a href=""><p>軽井沢の山の中でワーケーションを体験してみよう。</p></a><hr>
+
+    </article>
+    
+    <article>
+
+      <div class="flexbox">
+        <div class="title">[北海道特集]</div>
+        <time>2021-01−31</time>
+      </div>
+      <a href=""><p>北海道の美味しいお土産１０選。</p></a><hr>
+
+    </article>
+
+    <article>
+
+      <div class="flexbox">
+        <div class="title">[沖縄特集]</div>
+        <time>2021-01-21</time>
+      </div>
+      <a href=""><p>ゴルデンウィークは沖縄でゆっくり過ごそう。人気リゾートホテル特集</p></a><hr>
+
+    </article>
+
+    <article>
+
+      <div class="flexbox">
+        <div class="title">[ゴルフ特集]</div>
+        <time>2021-01-18</time>
+      </div>
+      <a href=""><p>環境を変えてスコアアップ！？国内ゴルフ場特集</p></a><hr>
+
+    </article>
+  </div>
+      
+<!-- おすすめ広告 -->
+  <div class="container" id="ad">
+
+    <h1>あなたへおすすめ情報</h1>
+
+    <section class="ad" id="goto">
+      <h1>GoToトラベル</h1>
+      <div class="rect">GoToトラベル</div>
+      <p>GoToトラベルキャンペーンご利用で最大５０％OFF</p>
+    </section>
+    
+    <section class="ad" id="online"> 
+      <h1>オンラインツアー</h1>
+      <div class="rect">オンラインツアー</div>
+      <p>オンラインツアーでご自宅から海外・国内旅行</p>
+    </section>
+    
+    <section class="ad" id="hawaii"> 
+      <h1>ハワイ</h1>
+      <div class="rect">ハワイ</div>
+      <p>【自主隔離免除】日本からの渡航者受け入れ開始！</p>
+    </section>
+
+    <section class="ad" id="bustour">
+      <h1>バスツアー</h1>
+      <div class="rect">バスツアー</div>
+      <p>日本の良さを再発見！お得な日帰りバスツアー</p>
+    </section>
+  
+  </div>
+
+<!-- Footer -->
   <footer>
     <span><a href=#top>TOPへ</a></span>
 
     <nav>
+
       <ul class="company">
         <li><a href="">会社概要</a></li>
         <li><a href="">IR情報</a></li>
@@ -528,12 +565,10 @@
           <li><a href="https://www.his-j.com/info/line/"  target=”_blank”><img src="img/line.jpg"></a></li>
         </ul>
       </section>
+
     </nav>
-
-
   </footer>
 
 <script src="js/main.js"></script>
-
 </body>
 </html>
