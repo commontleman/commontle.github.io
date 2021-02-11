@@ -37,7 +37,17 @@ header{
 
 /* TOP */
 
-#info span{
+.top a span::after{
+  content: none;
+}
+
+.top a:hover{
+  text-decoration: none;
+  opacity: 1;
+}
+
+.top span{
+  display: block;
   font-size: 30px;
   font-family: Cursive;
   color: var(--my-color);
@@ -97,6 +107,95 @@ header{
 }
 
 /* タブ */
+
+.smallscreenadcontainer{
+  position: relative;
+}
+
+.smallscreenad{
+  position: absolute;
+  bottom: calc((100% - 50px - 170px) / 2 );
+  left: calc((100% - 300px) / 2 );
+  display: block;
+  width: 300px;
+  border: 3px solid var(--my-color); 
+  box-sizing: border-box;
+  color: #fff;
+}
+
+.smallscreenad h1{
+  padding-left: 12px;
+  display: block;
+  font-size: 16px;
+  color: var(--my-color);
+}
+
+.smallscreenad h1 span{
+  padding-left: 42px;
+}
+
+.smallscreenad .coupon{
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  margin: 0 auto;
+}
+
+.smallscreenad h2{
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  margin-bottom: 0;
+  width: 100%;
+  margin: auto;
+  border: 2px solid #eee;
+  box-sizing: border-box;
+}
+
+.smallscreenad .box{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+  border: 2px solid #eee;
+  border-top: none;
+  color: #0f0f0f;
+  box-sizing: border-box;
+}
+
+.smallscreenad .box p {
+  font-size: 10px;
+  background: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  margin: 0;
+}
+
+.smallscreenad .box > p {
+  width: 60%;
+}
+
+.smallscreenad .box p + p{
+  width: 40%;
+  border-left: 2px solid #eee;
+}
+
+.smallscreenad .box p span{
+  font-size: 13px;
+  color: var(--my-color);
+  font-weight: bold;
+}
+
+.smallscreenad .btn a{
+  display: block;
+  margin: 15px auto;
+  width: 100px;
+  background: var(--my-color);
+  color: #000;
+  border-radius: 0;
+  font-size: 10px;
+  line-height: 20px;
+  border: 1px solid hsla(39, 100%, 70%);
+}
 
 main img{
   width: 100%;
@@ -267,8 +366,9 @@ main img{
   width: 100%;
   height: 100px;
   margin: 50px 0;
-  border: 2px solid #ccc;
+  /* border: 2px solid #ccc; */
   box-sizing: border-box;
+  box-shadow: 4px 4px 5px #ccc;
 }
 
 .miniad a{
@@ -440,7 +540,7 @@ main img{
 
 .destination li:hover{
   transform: translateY(-5px);
-  border: 1px solid var(--my-color);
+  box-shadow: 0 2px 5px var(--my-color);
 }
 
 .destination a{
@@ -561,7 +661,7 @@ main img{
 }
 
 .plan:hover{
-  opacity: 0.6;
+  opacity: 0.9;
   transform: scale(1.1, 1.1);
 }
 
@@ -624,6 +724,16 @@ display: none;
   flex-wrap: wrap;
 }
 
+#ad h1{
+  width: 100%;
+  text-align: center;
+}
+
+#ad > h1::before,
+#ad > h1::after{
+  content: ' - ';
+}
+
 .ad:hover{
   opacity: 0.8;
 }
@@ -631,20 +741,42 @@ display: none;
 .ad{
   width: 100%;
   height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 50px 0;
-  border: 2px solid var(--my-color);
   background-size: cover;
   background-position: center;  
+  border-radius: 10px;
+  box-shadow: 4px 4px 8px #ccc;
+}
+
+.ad{
+  position: relative;
 }
 
 .ad h1{
+  display: none;
+}
+
+.ad .rect{
+  box-shadow: 1px 1px 4px var(--my-color);
+  background: #fff;
+  border-radius: 5px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  line-height: 35px;
+  padding: 0 10px;
+}
+
+.ad p{
   width: 100%;
-  color:  #efdec1;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  line-height: 40px;
+  position: absolute;
+  bottom: 0;
   text-align: center;
-  font-size: 50px;
+  margin: 0;
+  border-radius: 0 0 10px 10px;
 }
 
 #goto{
@@ -748,14 +880,14 @@ footer nav ul{
   list-style-type: none;
 }
 
-.top a{
+.response a{
   color:  var(--my-color);
   text-align: center;
   padding: 0 10px ;
   position: relative;
 }
 
-.top a::after{
+.response a::after{
   content: ' ';
   background: #ccc;
   display: block;
@@ -766,11 +898,9 @@ footer nav ul{
   right: -1px;
 }
 
-.top a:hover{
+.response a:hover{
   opacity: 0.8;
 }
-
-
 
 /* メニュー */
 
@@ -908,8 +1038,8 @@ main img{
   margin: 16px;
 }
 
-/* mainad */
-.mainad{
+/* smallscreenad */
+.smallscreenad{
   display: none;
 }
 
@@ -1064,11 +1194,31 @@ main img{
   width: 140px;
   height: 140px;
   margin: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ad .rect{
+  display: none;
+}
+
+.ad p{
+  display: none;
 }
 
 .ad h1{
-  font-size: 30px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  margin: 0;
+  line-height: 140px;
+  font-size: 15px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.5);
 }
+
 
 /* footer */
 
@@ -1130,11 +1280,6 @@ main img{
 
 #outward{
   margin-top: 16px;
-}
-
-/* mainad */
-.mainad{
-  display: none;
 }
 
 /* ミニ広告 */
@@ -1253,7 +1398,8 @@ main img{
 }
 
 .ad h1{
-  font-size: 30px;
+  width: 100%;
+  line-height: 150px;
 }
 
 /* footer */
@@ -1383,6 +1529,18 @@ footer nav{
   width: 240px;
   height: 240px;
   margin: 10px;
+}
+
+.ad h1{
+  display: none;
+}
+
+.ad .rect{
+  display: block;
+}
+
+.ad p{
+  display: block;
 }
 
 }
